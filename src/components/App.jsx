@@ -1,16 +1,22 @@
-export const App = () => {
+import { useState } from 'react';
+import 'react-toastify/dist/ReactToastify.css';
+
+import SearchBar from "./SearchBar/SearchBar";
+
+export const App = () => { 
+
+  const [searhQuery, setsearhQuery] = useState('')
+
+  const handleFormSubmit = (searh) => {
+    setsearhQuery(searh);
+  }
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <>
+    <SearchBar onSubmit={handleFormSubmit}/>
+    </>
+      
+    
   );
+
+ 
 };
