@@ -43,7 +43,7 @@ const getImages = async() =>  {
     setTotal(response.total);
    
     ; 
-    // setlargeImage(response.hits.largeImageURL)
+    
     
    
   } catch (error) {
